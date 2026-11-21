@@ -1,0 +1,35 @@
+{
+  "case_id": "expired-plan-case",
+  "now": 5000,
+  "old_version": "tax-v1",
+  "new_version": "tax-v2",
+  "atoms": ["A"],
+  "old_labels": [
+    {"id": "L1", "atoms": ["A"]}
+  ],
+  "new_labels": [
+    {"id": "N1", "atoms": ["A"]}
+  ],
+  "mappings": [
+    {
+      "old_label": "L1",
+      "candidates": [
+        {"id": "L1-m1", "new_labels": ["N1"]}
+      ]
+    }
+  ],
+  "objects": [
+    {"id": "obj-1", "labels": ["L1"]}
+  ],
+  "roles": [
+    {"id": "r-admin", "authorized_atoms": ["A"]}
+  ],
+  "plan": {
+    "plan_id": "plan-expired-1",
+    "created_at": 900,
+    "valid_until": 2000,
+    "selection": [
+      {"old_label": "L1", "candidate_id": "L1-m1"}
+    ]
+  }
+}
